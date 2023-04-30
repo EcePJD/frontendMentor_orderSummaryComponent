@@ -1,0 +1,272 @@
+/* GLOBAL CSS - Start */
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-color: hsl(225, 100%, 94%);
+    position: relative;
+}
+
+body,
+.container {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -ms-flex-direction: column; /* TWEENER - IE 10 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+p,
+a,
+button {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.img-background {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+/* GLOBAL CSS - End */
+
+/* MAIN CSS - Start */
+.container-main {
+    min-width: 280px;
+    max-width: 450px;
+    min-height: 550px;
+    max-height: 800px;
+    width: 88%;
+    height: 80vh;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.container-main > * {
+    width: 86%;
+    align-self: center;
+}
+
+.container-main > img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    margin: 0;
+}
+
+.wrapper-order {
+    height: 70%;
+    justify-content: space-evenly;
+    max-width: 375px;
+}
+
+.wrapper-order > * {
+    width: 100%;
+}
+
+.title {
+    color: hsl(223, 47%, 23%);
+}
+
+.component-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.description {
+    letter-spacing: -0.02rem;
+    word-spacing: 0.05rem;
+    line-height: 1.5rem;
+    color: hsl(224, 23%, 55%);
+    width: 90%;
+}
+
+.wrapper-pricing {
+    flex-direction: row;
+    -ms-flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 0 5% 0;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+}
+
+.wrapper-price-plan {
+    flex-direction: row;
+    -ms-flex-direction: row;
+    justify-content: space-between;
+    width: 56%;
+    margin-left: 6%;
+}
+
+.wrapper-plan-selected {
+    width: 70%;
+}
+
+.selected-plan-title,
+.selected-plan-price {
+    font-size: 0.9rem;
+    font-weight: 900;
+    letter-spacing: -0.02rem;
+    word-spacing: 0.05rem;
+}
+
+.selected-plan-price {
+    font-weight: 700;
+}
+
+.link {
+    font-size: 0.80rem;
+    font-weight: 900;
+    margin-right: 6%;
+}
+
+.link-plan-change:hover {
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, 75%);
+}
+
+.btn {
+    width: 100%;
+    font-weight: 700;
+    padding: 4% 0 4% 0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-pay-order {
+    color:hsl(0, 0%, 100%);
+    background-color: hsl(245, 75%, 52%);
+}
+
+.btn-pay-order:hover {
+    color:hsl(0, 0%, 100%);
+    background-color: hsla(245, 75%, 52%, 75%);
+}
+
+.btn-cancel-order {
+    color:hsl(224, 23%, 55%);
+    background-color: hsl(0, 0%, 100%);
+    margin-top: 5%;
+}
+
+.btn-cancel-order:hover {
+    color: hsl(223, 47%, 23%);
+}
+/* MAIN CSS - End */
+
+/* Media Query - START */
+@media only screen and ( max-width: 425px ) {
+    .img-background {
+        content: url( "./images/pattern-background-mobile.svg" );
+    }
+}
+
+@media only screen and ( min-width: 426px ) {
+    .img-background {
+        content: url( "./images/pattern-background-desktop.svg" );
+    }
+}
+/* Media Query - END */
+
+/* not part of the challenge */
+/* FOOTER Element - START */
+.attribution {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+.attribution > * {
+    font-size: 0.75em;
+    margin: 0 5px;
+}
+
+.rate {
+    display: inline-block;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: rgb(155, 205, 238);
+    margin: 0 2px;
+    border-radius: 50%;
+}
+
+.rate-lit {
+    background-color: rgb(81, 140, 180);
+}
+
+.separator {
+    display: inline-block;
+    
+    border: solid 2px #597175;
+}
+
+@media only screen and (min-width: 881px) {
+    .text-cutter {
+        display: none;
+    }
+
+    .attribution * {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .attribution * {
+        font-size: 0.75em;
+    }
+
+    .text-cutter {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .attribution {
+        flex-direction: row;
+    }
+    
+    .separator {
+        width: 0;
+        min-height: 15px;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .attribution * {
+        font-size: 0.5em;
+    }
+
+    .separator {
+        width: 30px;
+        height: 0;
+        margin: 3px 0;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .attribution {
+        display: none;
+    }
+}
+/* FOOTER Element - END */
